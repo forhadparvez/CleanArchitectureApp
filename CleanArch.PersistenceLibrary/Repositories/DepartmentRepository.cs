@@ -10,53 +10,10 @@ using CleanArch.CoreLibrary.Repositories;
 
 namespace CleanArch.PersistenceLibrary.Repositories
 {
-    public class DepartmentRepository : IDepartmentRepository
+    public class DepartmentRepository :Repository<Department>, IDepartmentRepository
     {
-        private readonly CleanArchDbContext _context;
-
-        public DepartmentRepository(CleanArchDbContext context)
+        public DepartmentRepository(DbContext context) : base(context)
         {
-            _context = context;
-        }
-
-        public Department Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Department> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Department> Find(Expression<Func<Department, bool>> predicate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Department SingleOrDefault(Expression<Func<Department, bool>> predicate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Add(Department entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AddRange(IEnumerable<Department> entities)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(Department entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveRange(IEnumerable<Department> entities)
-        {
-            throw new NotImplementedException();
         }
     }
 }

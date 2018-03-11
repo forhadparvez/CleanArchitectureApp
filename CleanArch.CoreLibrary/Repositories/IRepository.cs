@@ -11,6 +11,7 @@ namespace CleanArch.CoreLibrary.Repositories
     {
         TEntity Get(int id);
         IEnumerable<TEntity> GetAll();
+        IQueryable<TEntity> GetAllQueryable();
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
         TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate);
 

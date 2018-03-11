@@ -28,6 +28,11 @@ namespace CleanArch.PersistenceLibrary.Repositories
             return Context.Set<TEntity>().ToList();
         }
 
+        public IQueryable<TEntity> GetAllQueryable()
+        {
+            return Context.Set<TEntity>();
+        }
+
         public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
             return Context.Set<TEntity>().Where(predicate);

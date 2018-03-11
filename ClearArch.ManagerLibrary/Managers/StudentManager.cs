@@ -38,6 +38,13 @@ namespace ClearArch.ManagerLibrary.Managers
             return _unitOfWork.Student.GetAll();
         }
 
+        public Student GetStudentByDepartmentAndName(int departmentId, string name)
+        {
+            var students = _unitOfWork.Student.GetAllQueryable();
+            students=students.Where(c => c.DepartmentId == departmentId);
+            return students.SingleOrDefault(c => c.Name == name);
+        }
+
         public IEnumerable<Student> GetStudentsWithDepartment()
         {
             return _unitOfWork.Student.GetStudentsWithDepartment();
