@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using AutoMapper;
+﻿using AutoMapper;
 using CleanArch.CoreLibrary.Models;
 using CleanArch.CoreLibrary.ViewModels;
-using ClearArch.ManagerLibrary.Managers;
+using ClearArch.ServiceLibrary.Managers;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace CleanArch.MvcUi.Controllers
 {

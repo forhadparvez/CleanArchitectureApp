@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using AutoMapper;
-using CleanArch.CoreLibrary;
+﻿using AutoMapper;
 using CleanArch.CoreLibrary.Dtos;
 using CleanArch.CoreLibrary.Models;
-using ClearArch.ManagerLibrary.Managers;
+using ClearArch.ServiceLibrary.Managers;
+using System.Linq;
+using System.Web.Http;
 
 namespace CleanArch.MvcUi.Controllers.Api
 {
@@ -34,7 +29,7 @@ namespace CleanArch.MvcUi.Controllers.Api
         {
             var student = Mapper.Map<StudentDto, Student>(studentDto);
             var successCount = _studentManager.Save(student);
-            if (successCount>0)
+            if (successCount > 0)
             {
                 return Ok(successCount);
             }
@@ -42,11 +37,11 @@ namespace CleanArch.MvcUi.Controllers.Api
         }
 
         [HttpPut]
-        public IHttpActionResult Update(int id,StudentDto studentDto)
+        public IHttpActionResult Update(int id, StudentDto studentDto)
         {
             var student = Mapper.Map<StudentDto, Student>(studentDto);
             var successCount = _studentManager.Update(id, student);
-            if (successCount>0)
+            if (successCount > 0)
             {
                 return Ok(successCount);
             }

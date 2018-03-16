@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch.PersistenceLibrar
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Business Logics", "02 Business Logics", "{6C7EB2D7-491A-4C8B-9260-F268B5B19B16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearArch.ManagerLibrary", "ClearArch.ManagerLibrary\ClearArch.ManagerLibrary.csproj", "{2C94DB58-0C6F-468B-993E-34E16FEED63F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearArch.ServiceLibrary", "ClearArch.ManagerLibrary\ClearArch.ServiceLibrary.csproj", "{2C94DB58-0C6F-468B-993E-34E16FEED63F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 User Interfaces", "01 User Interfaces", "{38E8D1B0-BD3E-4C39-B946-3F121E88C20D}"
 EndProject

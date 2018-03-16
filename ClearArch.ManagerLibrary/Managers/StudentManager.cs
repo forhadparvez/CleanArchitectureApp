@@ -4,7 +4,7 @@ using CleanArch.PersistenceLibrary;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ClearArch.ManagerLibrary.Managers
+namespace ClearArch.ServiceLibrary.Managers
 {
     public class StudentManager
     {

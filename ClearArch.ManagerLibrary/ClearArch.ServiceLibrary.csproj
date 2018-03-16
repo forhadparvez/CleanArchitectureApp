@@ -7,8 +7,8 @@
     <ProjectGuid>{2C94DB58-0C6F-468B-993E-34E16FEED63F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClearArch.ManagerLibrary</RootNamespace>
-    <AssemblyName>ClearArch.ManagerLibrary</AssemblyName>
+    <RootNamespace>ClearArch.ServiceLibrary</RootNamespace>
+    <AssemblyName>ClearArch.ServiceLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
