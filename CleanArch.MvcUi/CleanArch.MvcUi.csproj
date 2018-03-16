@@ -188,7 +188,7 @@
       <Project>{b7dd868a-1a90-44aa-9d1b-6e8ef19b51fa}</Project>
       <Name>CleanArch.CoreLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ClearArch.ManagerLibrary\ClearArch.ServiceLibrary.csproj">
+    <ProjectReference Include="..\ClearArch.ServiceLibrary\ClearArch.ServiceLibrary.csproj">
       <Project>{2c94db58-0c6f-468b-993e-34e16feed63f}</Project>
       <Name>ClearArch.ServiceLibrary</Name>
     </ProjectReference>
