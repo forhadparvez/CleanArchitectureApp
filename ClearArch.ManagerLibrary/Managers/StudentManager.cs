@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CleanArch.CoreLibrary;
+﻿using CleanArch.CoreLibrary;
 using CleanArch.CoreLibrary.Models;
 using CleanArch.PersistenceLibrary;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ClearArch.ManagerLibrary.Managers
 {
@@ -41,7 +38,7 @@ namespace ClearArch.ManagerLibrary.Managers
         public Student GetStudentByDepartmentAndName(int departmentId, string name)
         {
             var students = _unitOfWork.Student.GetAllQueryable();
-            students=students.Where(c => c.DepartmentId == departmentId);
+            students = students.Where(c => c.DepartmentId == departmentId);
             return students.SingleOrDefault(c => c.Name == name);
         }
 
@@ -61,14 +58,15 @@ namespace ClearArch.ManagerLibrary.Managers
             return _unitOfWork.Complete();
         }
 
-        public int Update(int id,Student student)
+        public int Update(int id, Student student)
         {
             var dbStudent = _unitOfWork.Student.Get(id);
-            dbStudent.Code = student.Code;
-            dbStudent.Name = student.Name;
-            dbStudent.Roll = student.Roll;
-            dbStudent.Address = student.Address;
-            return _unitOfWork.Complete();
+            if (dbStudent != null)
+            {
+                dbStudent = student;
+                return _unitOfWork.Complete();
+            }
+            return 0;
         }
 
 
@@ -76,9 +74,9 @@ namespace ClearArch.ManagerLibrary.Managers
         {
             var isCodeExist = false;
             var student = _unitOfWork.Student.SingleOrDefault(c => c.Code == code);
-            if (student!=null)
+            if (student != null)
                 isCodeExist = true;
-            
+
             return isCodeExist;
         }
 
