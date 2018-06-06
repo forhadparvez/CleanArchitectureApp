@@ -3,6 +3,7 @@ using CleanArch.CoreLibrary.Models;
 using CleanArch.PersistenceLibrary;
 using System.Collections.Generic;
 using System.Linq;
+using AutoMapper;
 
 namespace ClearArch.ServiceLibrary.Managers
 {
@@ -63,7 +64,7 @@ namespace ClearArch.ServiceLibrary.Managers
             var dbStudent = _unitOfWork.Student.Get(id);
             if (dbStudent != null)
             {
-                dbStudent = student;
+                Mapper.Map(student, dbStudent);
                 return _unitOfWork.Complete();
             }
             return 0;
