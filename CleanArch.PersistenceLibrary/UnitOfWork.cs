@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,18 +12,18 @@ namespace CleanArch.PersistenceLibrary
 {
     public class UnitOfWork:IUnitOfWork
     {
-        private readonly CleanArchDbContext _context;
+        private readonly DbContext _context;
 
 
         public IStudentRepository Student { get; private set; }
         public IDepartmentRepository Department { get; private set; }
 
-        public UnitOfWork(CleanArchDbContext context)
+        public UnitOfWork(DbContext context)
         {
             _context = context;
 
-            Student=new StudentRepository(context);
-            Department=new DepartmentRepository(context);
+            Student=new StudentRepository(_context);
+            Department=new DepartmentRepository(_context);
         }
 
         
